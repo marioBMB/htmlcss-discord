@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+.center-block {
+    width: 90%;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+
+#main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: green;
+    text-align: center;
+    vertical-align: bottom;
+}
+
+
+#main-header::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+#main-header nav {
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+#main-header nav ul {
+    list-style: none;
+}
+
+#main-header nav ul li {
+
+    display: inline-block;
+    margin: 0 10px;
+}
+
+#main-header nav ul li a{
+
+    color: #fff;
+    text-decoration: none;
+}
+
+#main-header .logo {
+    float: left;
+}
+
+#main-header #accedi {
+    float: right;
+}
+
+.btn {
+    border-radius: 20px;
+    background-color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+}
+
+
+section#jumbo {
+    background-image: url(img/jumbo.png);
+    margin: 0 auto;
+    height: 200px;
+
+}
+
+
+
+
+
+i.icon {
+    font-size: 20px;
+}
