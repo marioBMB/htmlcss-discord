@@ -19,12 +19,32 @@ body {
 
 
 .btn {
-    border-radius: 20px;
-    background-color: #fff;
+    border-radius: 25px;
     padding: 10px 20px;
     text-decoration: none;
-    display: block;
+    display: inline-block;
+    background-color: #fff;
+    margin: 10px;
 }
+
+a.btn {
+    color: black;
+}
+
+a.btn:hover {
+    color: #3161e0;
+}
+
+.btn.black-white {
+    background-color: #000;
+    color: white;
+}
+
+.btn.white-black {
+    background-color: #fff;
+}
+
+
 
 i.icon {
     font-size: 20px;
@@ -92,21 +112,25 @@ section#jumbo {
 }
 
 .jumbo-text {
-    width: 65%;
+    width: 62%;
     display: inline-block;
-    margin-top: 100px;
+    margin: 80px 0 160px 0;
     color: white;
-    font-size: 20px;
-    line-height: 1.4;
+    font-size: 18px;
+    line-height: 1.6;
 }
 
 .jumbo-text h2 {
-    font-size: 54px;
+    font-size: 50px;
     margin-bottom: 27px;
 }
 
 .jumbo-text p {
     margin-bottom: 20px;
+    text-indent: 50px;
 }
 
+#jumbo .btn {
+    font-size: 20px;
+}
 
