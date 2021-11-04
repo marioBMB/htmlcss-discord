@@ -1,3 +1,6 @@
+/*********************
+     GENERAL RULES
+/*********************/
 * {
     margin: 0;
     padding: 0;
@@ -5,7 +8,7 @@
 }
 
 body {
-    font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-family: "Whitney", Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
 .center-block {
@@ -15,53 +18,6 @@ body {
 }
 
 
-#main-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: green;
-    text-align: center;
-    vertical-align: bottom;
-}
-
-
-#main-header::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-
-#main-header nav {
-    display: inline-block;
-    vertical-align: bottom;
-}
-
-#main-header nav ul {
-    list-style: none;
-}
-
-#main-header nav ul li {
-
-    display: inline-block;
-    margin: 0 10px;
-}
-
-#main-header nav ul li a{
-
-    color: #fff;
-    text-decoration: none;
-}
-
-#main-header .logo {
-    float: left;
-}
-
-#main-header #accedi {
-    float: right;
-}
-
 .btn {
     border-radius: 20px;
     background-color: #fff;
@@ -70,18 +26,87 @@ body {
     display: block;
 }
 
+i.icon {
+    font-size: 20px;
+
+
+}
+
+
+/*********************
+    SECTIONS RULES
+/*********************/
+
+#main-header {
+    position: fixed;
+    width: 100%;
+    background-color: #3161e0;
+    text-align: center;
+    position: relative;
+    height: 80px;
+}
+
+#main-header div, #main-header nav  {
+    position: relative;
+    top: 50%;
+    transform: translate(0, -25%);
+}
+
+
+#main-header nav {
+    display: inline-block;
+}
+
+#main-header nav ul {
+    list-style: none;
+}
+
+#main-header nav ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+#main-header nav ul li a{
+    color: #fff;
+    text-decoration: none;
+}
+
+#main-header .logo {
+    float: left;
+}
+
+#main-header .logo img {
+    height: 100%; /* mi consente di impostare la nav alla stessa altezza del logo */
+}
+
+#main-header #accedi {
+    float: right;
+}
 
 section#jumbo {
     background-image: url(img/jumbo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
     margin: 0 auto;
-    height: 200px;
-
+    text-align: center;
 }
 
-
-
-
-
-i.icon {
+.jumbo-text {
+    width: 65%;
+    display: inline-block;
+    margin-top: 100px;
+    color: white;
     font-size: 20px;
+    line-height: 1.4;
 }
+
+.jumbo-text h2 {
+    font-size: 54px;
+    margin-bottom: 27px;
+}
+
+.jumbo-text p {
+    margin-bottom: 20px;
+}
+
+
