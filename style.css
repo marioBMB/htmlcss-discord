@@ -166,7 +166,7 @@ section#jumbo {
 section.screen {
     height: calc(100vh - 80px);
     width: 100%;
-    /* padding: 5vh 0; */
+    padding: 5vh 0;
 }
 
 
@@ -374,15 +374,13 @@ main section:not(:last-of-type):nth-child(odd)::after {
     content: "";
     background-image: url(img/wave.svg);
     background-size: cover;
-    background-repeat: repeat-x;
+    background-repeat: no-repeat;
     display: block;
-    height: 70px;
+    height: 80px;
     position: relative;
-    top: -70px;
+    top: -5vh;
     color:#f6f6f6;
-    position: relative;
     opacity: 0.03;
-    margin: 0;
 }
 
 
@@ -391,12 +389,13 @@ main section:not(:last-of-type):nth-child(even)::after{
     content: "";
     background-image: url(img/wave.svg);
     background-size: cover;
-    background-repeat: repeat-x;
+    background-repeat: no-repeat;
     display: block;
-    height: 70px;
+    height: 80px;
+    position: relative;
+    top: 5vh;
     transform: rotate(180deg);
     color:#f6f6f6;
-    position: relative;
     opacity: 0.03;
 }
 
