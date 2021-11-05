@@ -68,7 +68,7 @@ a.btn:hover {
 }
 
 
-i[class^="fa"]{
+.btn i[class^="fa"]{
     font-size: 20px;
     margin-right: 8px;
 }
@@ -178,16 +178,17 @@ section#jumbo {
 section.screen {
     height: calc(100vh - 80px);
     width: 100%;
+    padding-top: 100px;
+}
+
+main section .container-center {
     padding-top: 80px;
 }
 
-section.col-left .container-center, section.col-right .container-center {
-    padding-top: 160px;
+main section.full .container-center {
+    padding-top: 80px;
 }
 
-section .container-center {
-    padding-top: 160px;
-}
 
 section.col-left .text {
     float: left;
@@ -233,7 +234,6 @@ dando height:100% sulla dimensione della section (100vh-80px) mi dava problemi, 
 non mi scalava l'immagine al ridimensionamento orizzontale
 */
 section.full img {
-    width: 100%;
     object-fit: contain;
 }
 
@@ -255,6 +255,18 @@ section::after {
     clear: both;
 }
 
+section.download {
+    display: block;
+    height: auto;
+    margin: 0 auto;
+    padding: 160px 0;
+    text-align: center;
+    background-color: #f6f6f6;
+}
+
+section.download .container-center {
+    width: 50%;
+}
 
 
 .stars {
@@ -275,18 +287,6 @@ section::after {
 
 
 
-section.download {
-    display: block;
-    height: auto;
-    margin: 0 auto;
-    padding: 160px 0;
-    text-align: center;
-    background-color: #f6f6f6;
-}
-
-section.download .container-center {
-    width: 50%;
-}
 
 
 
