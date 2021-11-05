@@ -59,7 +59,7 @@ a.btn:hover {
     height: 100%;
 }
 
-.logo a{
+.logo a {
     display: block;
 }
 
@@ -68,13 +68,20 @@ a.btn:hover {
 }
 
 
-
-
-i.icon {
+i[class^="fa"]{
     font-size: 20px;
-
-
+    margin-right: 8px;
 }
+
+
+.f-left {
+    float: left;
+}
+
+.f-right {
+    float: right;
+}
+
 
 
 /*********************
@@ -118,6 +125,11 @@ i.icon {
     display: block;
 }
 
+#main-header nav ul li a:hover{
+    text-decoration: underline;
+}
+
+
 #main-header .logo {
     float: left;
 }
@@ -136,8 +148,7 @@ section#jumbo {
     background-repeat: no-repeat;
     margin: 0 auto;
     text-align: center;
-    height: 70vh;
-    margin-bottom: 30vh;
+    min-height: 546px;
     position: relative;
     top: 80px;
     z-index: 1;
@@ -148,12 +159,12 @@ section#jumbo {
     display: inline-block;
     margin: 80px 0 160px 0;
     color: white;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.6;
 }
 
 .jumbo-text h2 {
-    font-size: 50px;
+    font-size: 54px;
     margin-bottom: 27px;
 }
 
@@ -167,39 +178,47 @@ section#jumbo {
 section.screen {
     height: calc(100vh - 80px);
     width: 100%;
+    padding-top: 80px;
 }
 
+section.col-left .container-center, section.col-right .container-center {
+    padding-top: 160px;
+}
 
-section.text-left .text {
+section .container-center {
+    padding-top: 160px;
+}
+
+section.col-left .text {
     float: left;
     width: 40%;
     padding: 0 5% 0 5%;
 }
 
-section.text-left img {
+section.col-left img {
     float: right;
     width: 50%;
 }
 
 
 section .text h2 {
-    font-size: 46px;
+    font-size: 50px;
     margin: 20px 0;
 }
 
 section .text p {
-    font-size: 20px;
+    font-size: 24px;
     line-height: 1.4;
 }
 
 
-section.text-right .text {
+section.col-right .text {
     float: right;
     width: 40%;
     padding: 0 5% 0 5%;
 }
 
-section.text-right img {
+section.col-right img {
     float: left;
     width: 50%;
 }
@@ -209,13 +228,16 @@ section.full {
     margin: 0 auto;
 }
 
+/*
+dando height:100% sulla dimensione della section (100vh-80px) mi dava problemi, in quanto
+non mi scalava l'immagine al ridimensionamento orizzontale
+*/
 section.full img {
     width: 100%;
     object-fit: contain;
 }
 
 section.full .text {
-    width: 80%;
     margin: 0 auto;
 }
 
@@ -227,6 +249,11 @@ section.full .text p {
     font-size: 2.5vh;
 }
 
+section::after {
+    content:"";
+    display: table;
+    clear: both;
+}
 
 
 
@@ -240,48 +267,34 @@ section.full .text p {
     margin: 0 auto;
 }
 
-section::after {
-    content:"";
-    display: table;
-    clear: both;
-}
-
 
 .indigo {
     background-color: #8ea1e1;
     color: white !important;
 }
 
-footer {
-    width: 100%;
-    background-color: #23272a;
-    color: white;
-    padding: 40px 0 140px 0;
-}
 
 
 section.download {
     display: block;
     height: auto;
     margin: 0 auto;
-    padding: 5% 0;
+    padding: 160px 0;
     text-align: center;
+    background-color: #f6f6f6;
 }
 
 section.download .container-center {
-
     width: 50%;
 }
 
 
-.fifth {
-    width: 20%;
-    margin-right: 12.5%;
-}
 
-.tenth {
-    width: 10.5%;
-    margin-right: 5%;
+footer {
+    width: 100%;
+    background-color: #23272a;
+    color: white;
+    padding: 40px 0 120px 0;
 }
 
 
@@ -332,6 +345,18 @@ footer .column {
     float: left;
 }
 
+
+.fifth {
+    width: 20%;
+    margin-right: 12.5%;
+}
+
+.tenth {
+    width: 10.5%;
+    margin-right: 5%;
+}
+
+
 footer h3 {
     font-size: 30px;
     margin-bottom: 30px;
@@ -362,43 +387,31 @@ a.link-box {
     margin-right: 20px;
 }
 
-.f-left {
-    float: left;
-}
 
-.f-right {
-    float: right;
-}
 
 
 main section:nth-child(even){
     background-color: #f6f6f6;
 }
 
-
-main section:not(:last-of-type):nth-child(odd)::after {
+main section:not(:nth-last-of-type(2)):nth-child(even)::after, main section:not(:last-of-type):nth-child(odd)::after {
     content: "";
-    background-image: url(img/wave.svg);
+    background-image: url('data:image/svg+xml;utf8,<svg class="wave-1hkxOo" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100" preserveAspectRatio="none"><path class="wavePath-haxJK1 animationPaused-2hZ4IO" d="M826.337463,25.5396311 C670.970254,58.655965 603.696181,68.7870267 447.802481,35.1443383 C293.342778,1.81111414 137.33377,1.81111414 0,1.81111414 L0,150 L1920,150 L1920,1.81111414 C1739.53523,-16.6853983 1679.86404,73.1607868 1389.7826,37.4859505 C1099.70117,1.81111414 981.704672,-7.57670281 826.337463,25.5396311 Z" fill="%23FFFFFF"></path></svg>'); 
     background-size: cover;
     background-repeat: no-repeat;
     display: block;
     height: 80px;
+   
+}
+
+main section:not(:nth-last-of-type(2)):nth-child(even)::after{
     position: relative;
     top: -80px; /* padding of sections */
-    opacity: 0.03;
 }
 
 
-
-main section:not(:nth-last-of-type(2)):nth-child(even)::after{
-    content: "";
-    background-image: url(img/wave.svg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: block;
-    height: 80px;
+main section:not(:last-of-type):nth-child(odd)::after {
     transform: rotate(180deg);
-    opacity: 0.03;
 }
 
 
