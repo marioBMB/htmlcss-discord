@@ -1,3 +1,5 @@
+@import url('http://db.onlinewebfonts.com/c/294afa63edf49dc293dd90373066b4d4?family=Whitney');
+
 /*********************
      GENERAL RULES
 /*********************/
@@ -8,10 +10,10 @@
 }
 
 body {
-    font-family: "Whitney", Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-family: "Whitney", Helvetica, Arial, sans-serif;
 }
 
-.center-block {
+.container-center {
     width: 90%;
     max-width: 1180px;
     margin: 0 auto;
@@ -29,7 +31,6 @@ body {
 }
 
 .btn.large {
-
     font-size: 20px;
 }
 
@@ -125,7 +126,7 @@ i.icon {
     height: 100%; /* mi consente di impostare la nav alla stessa altezza del logo */
 }
 
-#main-header #accedi {
+#accedi, #registrati {
     float: right;
 }
 
@@ -209,7 +210,8 @@ section.full {
 }
 
 section.full img {
-    height: 100%;
+    width: 100%;
+    object-fit: contain;
 }
 
 section.full .text {
@@ -259,11 +261,16 @@ footer {
 
 
 section.download {
+    display: block;
+    height: auto;
     margin: 0 auto;
     padding: 5% 0;
-    height: auto;
-    width: 50%;
     text-align: center;
+}
+
+section.download .container-center {
+
+    width: 50%;
 }
 
 
@@ -383,7 +390,7 @@ main section:not(:last-of-type):nth-child(odd)::after {
 
 
 
-main section:not(:last-of-type):nth-child(even)::after{
+main section:not(:nth-last-of-type(2)):nth-child(even)::after{
     content: "";
     background-image: url(img/wave.svg);
     background-size: cover;
