@@ -149,6 +149,8 @@ section#jumbo {
     margin: 0 auto;
     text-align: center;
     min-height: 546px;
+    height: 60vh;
+    margin-bottom: calc(40vh - 80px - 80px);
     position: relative;
     top: 80px;
     z-index: 1;
@@ -178,16 +180,13 @@ section#jumbo {
 section.screen {
     height: calc(100vh - 80px);
     width: 100%;
-    padding-top: 100px;
-}
-
-main section .container-center {
     padding-top: 80px;
 }
 
-main section.full .container-center {
+main section .container-center{
     padding-top: 80px;
 }
+
 
 
 section.col-left .text {
@@ -227,6 +226,7 @@ section.col-right img {
 section.full {
     text-align: center;
     margin: 0 auto;
+    padding-top: 80px;
 }
 
 /*
